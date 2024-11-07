@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: #1c1c1c;
+    color: #ffffff;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode h1, body.dark-mode h3 {
+    color: #ffffff;
+}
+
+/* Tema Oscuro */
+body.dark-mode .form-wrapper, body.dark-mode .table-wrapper {
+    background: #2e2e2e;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .fl-table {
+    background-color: #3c3c3c;
+}
+
+body.dark-mode .fl-table td, body.dark-mode .fl-table th {
+    color: #ffffff;
+}
+
+body.dark-mode .fl-table thead th {
+    background: #5a67d8;
+}
+
+body.dark-mode button.btn:disabled {
+    background-color: #d3d3d3;
+    color: #8c8c8c;
+    cursor: not-allowed;
+}
+
+body.dark-mode button.btn {
+    background-color: #5a67d8;
+}
+
+body.dark-mode button.btn:hover:enabled {
+    background-color: #434190;
+}
+
+/* Estilo para las filas alternas en modo oscuro */
+body.dark-mode .fl-table tbody tr:nth-child(even) {
+    background: #444; /* Fondo para filas pares */
+}
+
+body.dark-mode .fl-table tbody tr:nth-child(odd) {
+    background: #555; /* Fondo para filas impares */
+}
+
+/* Panel de control */
+.panel-control {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Form Styles */
+.form-wrapper {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    max-height: 520px;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button.btn {
+    background-color: #5a67d8;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.btn:disabled {
+    background-color: #d3d3d3;
+    color: #8c8c8c;
+    cursor: not-allowed;
+}
+
+button.btn:hover:enabled {
+    background-color: #434190;
+}
+
+/* Table Styles */
+.table-wrapper {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.fl-table thead th {
+    color: #fff;
+    background: #5a67d8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.fl-table tbody tr:nth-child(even) {
+    background: #f4f7f6;
+}
+
+/* Responsive Table */
+@media (max-width: 767px) {
+    .panel-control {
+        flex-direction: column;
+    }
+
+    .fl-table, .form-wrapper {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tema Oscuro */
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.theme-toggle input[type="checkbox"] {
+    margin-right: 5px;
+}
